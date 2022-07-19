@@ -1,10 +1,10 @@
 import React from 'react';
 import BooksShelf from '../components/BooksShelf';
 
-const Home = ({ books, shelfs }) => {
-  console.log(books);
-  console.log(shelfs[0].title);
-
+const Home = ({ shelfs, onShelfChange }) => {
+  const handleShelfChange = (book, shelf) => {
+    onShelfChange(book, shelf);
+  };
   return (
     <>
       <div className="list-books">
@@ -13,7 +13,12 @@ const Home = ({ books, shelfs }) => {
         </div>
         <div className="list-books-content">
           {shelfs.map((shelf, index) => (
-            <BooksShelf key={index} shelf={shelf.title} books={shelfs[index].books} />
+            <BooksShelf
+              key={index}
+              shelf={shelf.title}
+              books={shelfs[index].books}
+              onShelfChange={handleShelfChange}
+            />
           ))}
         </div>
       </div>
