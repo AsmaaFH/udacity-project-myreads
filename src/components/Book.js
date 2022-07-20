@@ -16,13 +16,13 @@ const Book = ({ book, onShelfSelect }) => {
             backgroundImage: `url("${book.imageLinks.thumbnail}")`,
           }}
         ></div>
-        <ShelfSelect book={book} onShelfChange={handleShelfChange} />
+        <ShelfSelect book={book} shellf={book.shelf} onShelfChange={handleShelfChange} />
       </div>
       <div className="book-title">{book.title}</div>
       <div className="book-authors">
-        {book.authors.map((author, index) => (
+        {/* {book.authors.map((author, index) => (
           <span key={index}>{author + ', '}</span>
-        ))}
+        ))} */}
       </div>
     </div>
   );

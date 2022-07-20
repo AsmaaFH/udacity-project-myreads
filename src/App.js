@@ -1,5 +1,6 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import Home from './pages/home';
 import Search from './pages/search';
 import * as BooksApi from './BooksAPI';
@@ -39,10 +40,9 @@ const App = () => {
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/" element={<Home shelfs={shelfs} onShelfChange={handleShelfChange} />} />
+        <Route path="/search" element={<Search books={books} />} />
       </Routes>
-      <Home books={books} shelfs={shelfs} onShelfChange={handleShelfChange} />
     </div>
   );
 };
