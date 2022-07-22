@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SearchInput = ({ onSerch }) => {
   const [value, setValue] = useState('');
@@ -9,6 +10,9 @@ const SearchInput = ({ onSerch }) => {
   };
   return (
     <div className="search-books-bar">
+      <Link to={'/'} className="close-search">
+        Close
+      </Link>
       <div className="search-books-input-wrapper">
         <input
           type="text"

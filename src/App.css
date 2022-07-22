@@ -5,6 +5,7 @@ body,
 }
 body {
   line-height: 1.5;
+  font-family: monospace;
 }
 body,
 .app {
@@ -105,7 +106,12 @@ body,
 .search-books-results {
   padding: 80px 10px 20px;
 }
-
+.search-books-results.no-results{
+  text-align: center;
+}
+option:checked {
+   background-color: #60ac5d;
+}
 /* books grid */
 
 .books-grid {
@@ -163,6 +169,13 @@ body,
   opacity: 0;
   cursor: pointer;
 }
+.book-authors{
+  padding: 12px;
+}
+.book-authors li{
+  padding: 0;
+  
+}
 
 /* book cover */
 
@@ -174,4 +187,9 @@ body,
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+/* Error */
+.error{
+  padding: 70px 30px;
 }

@@ -1,20 +1,24 @@
 import React from 'react';
 import Book from './Book';
-import * as BooksApi from '../BooksAPI';
 
-const SearchedBooks = ({ books }) => {
+const SearchedBooks = ({ shelvedBooks, searchedBooks, onShelfChange }) => {
   const handleShelfSelect = (book, shelf) => {
-    BooksApi.update(book, shelf);
-    console.log(shelf);
+    onShelfChange(book, shelf);
+    // BooksApi.update(book, shelf);
   };
 
   return (
     <div>
       <div className="search-books-results">
         <ol className="books-grid">
-          {books.map((book) => (
+          {searchedBooks.map((book) => (
             <li key={book.id}>
-              <Book book={book} onShelfSelect={handleShelfSelect} />
+              <Book
+                isSearch={true}
+                shelvedBooks={shelvedBooks}
+                book={book}
+                onShelfSelect={handleShelfSelect}
+              />
             </li>
           ))}
         </ol>
