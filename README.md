@@ -24,7 +24,8 @@ To get started developing right away:
     │   ├── SearchedBooks.js # Component for Displaying Books Searched By a User.
     │	├── SearchInput.js # Component for User Search Input
     │	├── ShelfSelect.js # Component for Select a Shelf Wrapped Inside Every Book.
-    │	└── Error.js # Component for Handling Error that Would Caused as a Result for Non match Search Value or 	    │       Unable to Connect Server.
+    │	└── Error.js # Component for Handling Error that Would Caused as a Result for Non match Search Value or 
+    │       Unable to Connect Server.
     │
     ├── pages
     │   ├── home.js # Component for Main Page, Includes the Three Shelves and Their Books.
